@@ -64,7 +64,7 @@ You may find additional help and inspiration in the examples contained in the fo
 
 * [Algo2012](http://github.com/ofZach/algo2012) by [Zach Lieberman](http://thesystemis.com/)
 * [Algo2013](https://github.com/cwhitney/algo2013) by [Charly Whitney](http://www.sharkbox.com/)
-* [sims2014](https://github.com/cwhitney/algo2013) by [Patricio Gonzalez Vivo](http://www.sharkbox.com/)
+* [sims2014](https://github.com/patriciogonzalezvivo/sims2014) by [Patricio Gonzalez Vivo](https://github.com/patriciogonzalezvivo)
 
 ##### C++ and oF
 Because we will code in C++, the sooner you get comfortable with it the better. There is A LOT of helpful extra material; personally I like the following resources:
