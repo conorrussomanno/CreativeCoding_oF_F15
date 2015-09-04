@@ -6,7 +6,7 @@
 * 8:00-8:20 - What is openFrameworks? File structure...
 * 8:20-8:35 - BREAK
 * 8:35-9:00 - Github download/installation and review
-	* practice pulling/pushing
+	* practice [pulling/pushing](http://guides.railsgirls.com/github/)
 * 9:00-9:20 - go over Project I & HW summary
 	* Leaf, Branch, Tree, Forrest (hierarchical programming)	 
 
@@ -38,3 +38,9 @@
              
   ```
 **CREDIT**: http://ascii.co.uk/art/tree
+
+
+Lighting = natural recursion!
+
+
+![image](http://i.imgur.com/8qV7l.gif)
