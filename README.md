@@ -31,9 +31,9 @@ In this course we will be diving into a wide spectrum of creative coding techniq
 * WK11 (11/12) - "GUIs!" - buttons, sliders, knobs, drop-down menus, control panels, toolbars
 * WK12 (11/19) - "Beyond the 'Sketch'" - system modes, levels, exporting OF applications
 * **THANKSGIVING (11/26) - NO CLASS! - eat turkey.**
-* WK13 (12/5) - "Beyond the 'Sketch' 2" - WK12 continued...
-* WK14 (12/12) - Project III work day
-* WK15 (12/19) - **Project III Presenations**
+* WK13 (12/3) - "Beyond the 'Sketch' 2" - WK12 continued...
+* WK14 (12/10) - Project III work day
+* WK15 (12/17) - **Project III Presenations**
 
 ## Learning Outcomes
 
