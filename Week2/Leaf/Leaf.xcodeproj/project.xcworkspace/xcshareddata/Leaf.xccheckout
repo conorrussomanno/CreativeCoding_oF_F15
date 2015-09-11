@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7BEA36A2-F813-4C44-91DD-DD952F3FEE40</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Leaf</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FFE5CD7D09E32D256634A905FFDCEBDDC3679BDF</key>
+		<string>https://github.com/conorrussomanno/CreativeCoding_oF_F15</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Week2/Leaf/Leaf.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FFE5CD7D09E32D256634A905FFDCEBDDC3679BDF</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/conorrussomanno/CreativeCoding_oF_F15</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FFE5CD7D09E32D256634A905FFDCEBDDC3679BDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FFE5CD7D09E32D256634A905FFDCEBDDC3679BDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CreativeCoding_oF_F15</string>
+		</dict>
+	</array>
+</dict>
+</plist>
