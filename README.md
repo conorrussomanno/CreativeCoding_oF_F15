@@ -8,6 +8,26 @@
 
 In this course we will be diving into a wide spectrum of creative coding techniques with openFrameworks as our main engine for learning and designing. Topics covered in this course include: object-oriented programming, procedural art, physics simulation, algorithmic animation, interface design & interactivity, open-source code development, and more. Make no mistake, this course will be technically challenging and require a significant amount of personal initiative; programming is a never-ending search for novel ideas to borrow and expand upon. Code is a powerful contruct that pervades the world we live in. If you are ready to commit yourself fully to the art of coding, you will thoroughly enjoy this course and leave with a precious new medium for artistic expression, as well as, a fresh appreciation for the digital and analog systems of our universe.
 
+## Students (and their work!)
+
+* [Sofia Aronov](https://github.com/Sofiaaronov/CreativeCoding_oF_F15_Sofia_Aronov)
+* [Shikha Singh](https://github.com/sings257/CreativeCoding_oF_F15_Shikha_Singh)
+* [Shangqing Yuan](https://github.com/yuanshq/CreativeCoding_oF_F15_Shangqing_Yuan)
+* [Qinzi Tan](https://github.com/nutosee/CreativeCoding_oF_F15_Qinzi_Tan)
+* [Michael Yen Wei Huang](https://github.com/mikeihuang/CreativeCoding_oF_F15_MichaelYenWei_Huang)
+* [Michael Glen](https://github.com/mjglen/CreativeCoding_oF_F15_Michae_Glen)
+* [Xiaoyin Sun](https://github.com/sunx601/CreativeCoding_oF_F15_Xiaoyin_Sun.git)
+* [Lauren Petty](https://github.com/lucylittles/CreativeCoding_oF_F15_Lauren_Petty)
+* [Stephanie McNiel](https://github.com/smcniel/CreativeCoding_oF_F15_Stephanie_McNiel)
+* [Vicky Yadid](https://github.com/yadiv745/CreativeCoding_oF_F15_Vicky_Yadid)
+* [Xiaomeng Tang](https://github.com/tangx035/CreativeCoding_oF_F15_Xiaomeng_Tang.git)
+* [Sarah Montero](https://github.com/jorimperdomo/CreativeCoding_oF_F15_Sarah_Montero.git)
+* [Danli Hu](https://github.com/DanliHu/CreativeCoding_oF_F15_Danli_Hu)
+* [Kuo Jui Hung](https://github.com/hungk901/CreativeCoding_oF_F15_KuoJui_Hung)
+* [Si Ping Lim](https://github.com/thehandson/CreativeCoding_oF_F15_SiPing_Lim)
+* [Ryan Hall](https://github.com/Hallr841/CreativeCoding_oF_F15_RYAN_HALL)
+* [Dana Avesar](https://github.com/danaavesar/of_creativecoding_fall2015_dana_avesar)
+
 ## Course Outline
 
 ##### Part I - Object-Oriented Programming, Procedural Art, & The Hierarchical World of Everything!
@@ -70,34 +90,24 @@ You may find additional help and inspiration in the examples contained in the fo
 Because we will code in C++, the sooner you get comfortable with it the better. There is A LOT of helpful extra material; personally I like the following resources:
 
 * [ofBook](https://github.com/openframeworks/ofBook/tree/master/chapters)
-
 * [Stanford University - CS107 - Programming Paradigms](http://videolectures.net/stanfordcs107s08_programming_paradigms/) by Jerry Cain
-
 * [Effective C++](http://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876/ref=sr_1_23?ie=UTF8&qid=1408141753&sr=8-23&keywords=c%2B%2B) by Scott Meyers
 
 As regular consulting material you will probably want to have the following links pre-bookmarked on your browser:
 
 * [cplusplus.com](http://www.cplusplus.com/) I encourage the use of [Dash](http://kapeli.com/dash) on MacOS
-
 * [OpenFrameworks Forum](http://forum.openframeworks.cc/) 
-
 * [OpenFrameworks IRC Channel](http://webchat.freenode.net/?channels=openframeworks&uio=MT1mYWxzZSY5PXRydWUmMTE9Mjk39)
-
 * StackOverFlow [C++](http://stackoverflow.com/questions/tagged/c%2b%2b), [CodeBlocks](http://stackoverflow.com/questions/tagged/codeblocks) & [Xcode](http://stackoverflow.com/questions/tagged/xcode) (There is an openFrameworks tag, but is better if you use the OF-forum for questions.)
 
 ##### Algorithms and Simulation
 There are a huge number of papers, books and examples online about algorithms and simulation. Not all of them are in C++, but hopefully you will train yourself to interpret and translate them. Here are some friendly approaches:
 
 * [Nature of Code](http://natureofcode.com/book/) by Daniel Shiffman
-
 * [FORM+CODE](http://www.amazon.com/Form-Code-Design-Architecture-Briefs/dp/1568989377/ref=pd_sim_b_5?ie=UTF8&refRID=1JSMXNRNDJXKC5N91R2J) by Casey Reas
-
 * [Generative Design](http://www.amazon.com/dp/1616890770/ref=wl_it_dp_o_pC_nS_ttl?_encoding=UTF8&colid=2P8RIIKRMUEMF&coliid=I5PWJK09L1FVH) by Hartmut Bohnacker, Benedikt Gross, Julia Laub and Claudius Lazzeroni
-
 * [The Computational Beauty of Nature](http://www.amazon.com/gp/product/0262561271/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) by Gary William Flake ( [here](https://github.com/gwf/CBofN) are the code examples from the book)
-
 * [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/abop/abop.pdf) by Przemyslaw Prusinkiewicz and Aristid Lindenmayer
-
 * [Golan’s](http://golancourses.net/2013/lectures/lecture-01-30/) class notes of Generative Art
 
 ## Grading Standards
