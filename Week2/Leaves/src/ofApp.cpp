@@ -22,6 +22,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    
     for (int i = 0; i < numLeaves; i++){
         leaves[i].draw();
     }

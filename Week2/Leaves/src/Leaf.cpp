@@ -80,7 +80,16 @@ void Leaf::draw(){
         
         ofSetColor(stemColor);
         ofRect(0,0 - (stemLength/2), stemWidth, stemLength); //MATH!
-        ofTriangle(0 - stemWidth/2, 0 - stemLength, 0 + stemWidth/2, 0 - stemLength, 0, 0 - stemLength - 3*(leafLength/4));
+    
+        float x11 = 0 - stemWidth/2;
+        float x22 = 0 + stemWidth/2;
+
+        ofTriangle(x11, 0 - stemLength, x22, 0 - stemLength, 0, 0 - stemLength - 3*(leafLength/4));
+    
+    cout << "x1 = ";
+    cout << x1 << endl;
+    cout << "x2 = ";
+    cout << x2 << endl;
     
     ofPopMatrix();
 
