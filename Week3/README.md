@@ -28,6 +28,7 @@
 * Finish the Branch + Leaf code we started in class. Add your own personal flare.
 * ** ADVANCED:** if you cruised through HWs 1 & 2. Try using the techniques that we've been learning to create a procedurally generated flower. Then add that flower to your branch with your leaves as well!
 
+![image](./Branch_Plus_Leaf.png)
 ![image](./tree1.png)
 ![image](./tree2.png)
 ![image](./tree3.JPG)
