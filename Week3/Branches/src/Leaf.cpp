@@ -12,7 +12,23 @@ void Leaf::setup(){
     xPos = ofGetWidth()/2; //set to middle of screen in the horizontal
     yPos = ofGetHeight()/2; //set to 3/4 of the way from the top of the screen in the vertical
     stemColor = ofColor(ofRandom(100,150),69,19); //brown
-    leafColor = ofColor(ofRandom(0,20),ofRandom(100,200),ofRandom(0,20), ofRandom(150,255)); //set to random green color
+    
+    float randomNumber = ofRandom(0, 4);
+    
+    if(randomNumber >= 0 && randomNumber <1){
+        leafColor = ofColor(ofRandom(100,150),69,19); //brown
+    }
+    if(randomNumber >= 1 && randomNumber < 2) {
+        leafColor = ofColor(ofRandom(200,250),20,19); //red
+    }
+    if(randomNumber >= 2 && randomNumber < 3) {
+        leafColor = ofColor(ofRandom(100,150),ofRandom(200,250),19); //yellow
+    }
+    if(randomNumber >= 3 && randomNumber < 4) {
+        leafColor = ofColor(ofRandom(0,20),ofRandom(100,200),ofRandom(0,20), ofRandom(150,255)); //set to random green color
+    }
+    
+//    leafColor = ofColor(ofRandom(0,20),ofRandom(100,200),ofRandom(0,20), ofRandom(150,255)); //set to random green color
     scaleFactor = ofRandom(.1,.3);
     ofSetRectMode(OF_RECTMODE_CENTER);
     stemLength = ofRandom(50,100);
