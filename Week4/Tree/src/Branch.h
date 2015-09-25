@@ -15,7 +15,7 @@
 class Branch : public ofBaseApp{
     
 public:
-    void setup(float george, float _yPos, float _width,
+    void setup(float _xPos, float _yPos, float _width,
                float _length,
                float _splitPercentage,
                float _maxSplitAngle,
@@ -25,6 +25,7 @@ public:
                float _angle,
                float _curvature,
                ofColor _color,
+               int _season,
                int numberOfBobs);
     void update();
     void draw();
@@ -48,6 +49,7 @@ private:
     int numLeaves;
     vector<Leaf> leaves;
     bool split;
+    int season;
     
 };
 

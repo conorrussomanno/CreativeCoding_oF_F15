@@ -8,24 +8,28 @@
 
 #include "Leaf.h"
 
-void Leaf::setup(float _branchAngle){
+void Leaf::setup(float _branchAngle, int _season){
     xPos = ofGetWidth()/2; //set to middle of screen in the horizontal
     yPos = ofGetHeight()/2; //set to 3/4 of the way from the top of the screen in the vertical
     stemColor = ofColor(ofRandom(100,150),69,19); //brown
     
-    float randomNumber = ofRandom(0, 4);
+    season = _season;
     
-    if(randomNumber >= 0 && randomNumber <1){
-        leafColor = ofColor(ofRandom(100,150),69,19); //brown
-    }
-    if(randomNumber >= 1 && randomNumber < 2) {
-        leafColor = ofColor(ofRandom(200,250),20,19); //red
-    }
-    if(randomNumber >= 2 && randomNumber < 3) {
-        leafColor = ofColor(ofRandom(100,150),ofRandom(200,250),19); //yellow
-    }
-    if(randomNumber >= 3 && randomNumber < 4) {
+    if(season == 0 || season == 3){
         leafColor = ofColor(ofRandom(0,20),ofRandom(100,200),ofRandom(0,20), ofRandom(150,255)); //set to random green color
+
+    } else if(season == 1){
+        randomNumber = ofRandom(0, 3);
+        
+        if(randomNumber >= 0 && randomNumber <1){
+            leafColor = ofColor(ofRandom(100,150),69,19); //brown
+        }
+        if(randomNumber >= 1 && randomNumber < 2) {
+            leafColor = ofColor(ofRandom(200,250),20,19); //red
+        }
+        if(randomNumber >= 2 && randomNumber < 3) {
+            leafColor = ofColor(ofRandom(100,150),ofRandom(200,250),19); //yellow
+        }
     }
     
 //    leafColor = ofColor(ofRandom(0,20),ofRandom(100,200),ofRandom(0,20), ofRandom(150,255)); //set to random green color

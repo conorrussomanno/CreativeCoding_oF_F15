@@ -22,6 +22,7 @@ class ofApp : public ofBaseApp{
     
     private:
         Branch myBranch;
-        bool hasDrawn;  
+        bool hasDrawn;
+        int season;
 		
 };

@@ -21,6 +21,7 @@ void Branch::setup(float _xPos,
                    float _angle,
                    float _curvature,
                    ofColor _color,
+                   int _season,
                    int numberOfBobs){
     
     //===========================================
@@ -39,6 +40,7 @@ void Branch::setup(float _xPos,
     angle = _angle;
     curvature = _curvature;
     color = _color;
+    season = _season;
     
     //===========================================
     //does the branch split??
@@ -61,10 +63,12 @@ void Branch::setup(float _xPos,
         numLeaves = 0;
     }
     
-    for(int i = 0; i < numLeaves; i++){
-        Leaf tempLeaf;
-        tempLeaf.setup(angle);
-        leaves.push_back(tempLeaf);
+    if(season != 2){
+        for(int i = 0; i < numLeaves; i++){
+            Leaf tempLeaf;
+            tempLeaf.setup(angle, season);
+            leaves.push_back(tempLeaf);
+        }
     }
     
     //===========================================
@@ -94,8 +98,10 @@ void Branch::setup(float _xPos,
     //draw leaves on current branch
     //===========================================
     
-    for(int i = 0; i < numLeaves; i++){
-        leaves[i].draw(xPos + length*cos(angle), yPos + length*sin(angle));
+    if(_season != 2){
+        for(int i = 0; i < numLeaves; i++){
+            leaves[i].draw(xPos + length*cos(angle), yPos + length*sin(angle)); //drawing leaves at the end of this branch...based on length and angle
+        }
     }
 
     //===========================================
@@ -106,9 +112,12 @@ void Branch::setup(float _xPos,
     yPos += length*sin(angle);
     width = width*(ofRandom(0.5,0.8));
     length = length*(ofRandom(0.7, 0.9));
-    segmentsSinceStart += 1;
     angle += curvature;
     curvature += ofRandom(0, (float)(2*PI)/360.0);
+    
+    //========================================
+    segmentsSinceStart += 1; // DO THIS OR THE RECURSION WILL NEVER STOP!!!
+    //========================================
     
     //===========================================
     //RECURSION!
@@ -117,7 +126,7 @@ void Branch::setup(float _xPos,
     if (segmentsSinceStart <= maxSegments) {
         if(!split){ //if the branch does not split... just create one more branch to keep going (in roughly the same direction)
             Branch subBranch;
-            subBranch.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle, curvature, color, 5);
+            subBranch.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle, curvature, color, season, 5);
         } else { //if the branch does split!! create two sub-branches
             cout << "split" << endl; //some feedback
             Branch subBranch1;
@@ -125,9 +134,9 @@ void Branch::setup(float _xPos,
             Branch subBranch2;
             float angle2 = angle - ofRandom(0, maxSplitAngle);
             
-            subBranch1.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle1, curvature, color, 5);
+            subBranch1.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle1, curvature, color, season, 5);
             
-            subBranch2.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle2, curvature, color, 5);
+            subBranch2.setup(xPos, yPos, width, length, splitPercentage, maxSplitAngle, maxSubdivsions, maxSegments, segmentsSinceStart, angle2, curvature, color, season, 5);
         }
     }  
 }
