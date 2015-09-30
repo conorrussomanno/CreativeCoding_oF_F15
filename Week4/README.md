@@ -19,9 +19,14 @@
 * Recursion (Computer Science) > https://en.wikipedia.org/wiki/Recursion_(computer_science)
 * [FORM+CODE — "Repeat: Recursive Tree"](http://formandcode.com/code-examples/repeat-recursive-tree)
 * [openFrameworks documentation !!!](http://openframeworks.cc/documentation/)
+* [Algorithm Drawing (explanation of Sin & Cos in code) via Patricio Gonzalez Vivo](http://patriciogonzalezvivo.com/2015/thebookofshaders/05/)
 
 ### HW due next Thursday (10/1/15) @ 6pm
 
 * Finish your tree!!! Show & Tell next week.
 * Add flowers if you are feeling fancy. :)
+
+
+![image](sincos.gif)
+
 
