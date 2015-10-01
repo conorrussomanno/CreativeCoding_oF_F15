@@ -3,6 +3,7 @@
 ###Topics
 
 * Project 1 Wrap-up
+* README.md files in markdown with Mou
 
 ###Agenda
 
@@ -26,6 +27,7 @@
 
 ### HW due next Thursday (10/1/15) @ 6pm
 
+* Clean up your personal repos!
 * Make sure you've pushed your Project 1 into a unique directory in your Github repo. The directory should be called "Project1" and it should be in your primary repo with all of your homework folders from weeks 1-4, as follows:
 	* Creative_Coding_oF_firstName_lastName/
 		* Week1/
@@ -33,9 +35,8 @@
 		* Week3/
 		* Week4/
 		* Project1/
-* Your Project 1 should have a README with at least one screenshot of your tree. Feel free to also include a screencapture of you interacting with your Tree App and recursively generating different trees.
-* If you haven't put a brief bio and a picture of yourself in your primary repo's README, please do so now!
-* Next week is animation!!!
-	* if you want to get a head start, check out:
+* Your Project 1 should have a README with at least one screenshot of your tree. Feel free to also include a screencapture of you interacting with your Tree application and recursively generating different trees.
+* If you haven't put a brief bio and a picture of yourself in your primary repo's README, please do!
+* Next week we begin animation!!!
 		 
 
