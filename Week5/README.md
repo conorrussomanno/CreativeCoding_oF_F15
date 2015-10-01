@@ -12,6 +12,7 @@
 	* Explain what you did... what's new/different about your sketch?
 	* What were your biggest challenges/hurdles?
 	* What were your biggest successes?
+* Walkthrough on creating a README and using Mou...
 * Making a forrest... if we have time...
 	* Maybe just white board and pseudocode	 	
 
