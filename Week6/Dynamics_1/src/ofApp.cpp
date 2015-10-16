@@ -13,7 +13,7 @@ void ofApp::setup(){
     
 }
 
-void ofApp::systemStart(){
+void ofApp::systemStart(float _mouseX, float _mouseY){
     
     balls.clear(); //clear vector of balls if there is anything in there... 
     
@@ -24,11 +24,11 @@ void ofApp::systemStart(){
     numBalls = 1000;
     for(int i = 0; i < numBalls; i++){
         Ball temp;
-        temp.setup(ofRandom(0, ofGetWidth()),                          //xPos
+        temp.setup(_mouseX,                          //xPos
 //                       ((ofGetHeight()-100)/(numBalls-1))*i + 50,                //yPos
-                      ofRandom(ofGetHeight()),                //yPos
+                      _mouseY,                //yPos
                        ofRandom(-5,5),                                                        //xVel
-                       ofRandom (-5, 5),                                                        //yVel
+                       ofRandom (-5,5),                                                        //yVel
                        0,                                                        //xAcc
                        .5,                                                        //yAcc
                        10,                                                       //diameter
@@ -93,7 +93,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    systemStart();
+    systemStart(mouseX, mouseY);
 }
 
 //--------------------------------------------------------------

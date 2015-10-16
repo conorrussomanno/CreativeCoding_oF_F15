@@ -24,10 +24,12 @@ WK6 (10/8) - "Dynamics" - position, velocity, acceleration, vectors
 
 ### Helpful Resources
 
-... will be added soon ...
+* mouseX & mouseY
 
 ### HW due next Thursday (10/1/15) @ 6pm
 
 * GITHUB REPOS!!!
 * Based on what we learned in class today, make an animation of an exploding firework.
+	* Make it as realistic as possible!
+	* implement mouseX and mouseY
 

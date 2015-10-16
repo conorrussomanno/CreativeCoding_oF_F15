@@ -7,7 +7,7 @@ class ofApp : public ofBaseApp{
 
 	public:
 		void setup();
-        void systemStart();
+        void systemStart(float _mouseX, float _mouseY);
 		void update();
 		void draw();
 
