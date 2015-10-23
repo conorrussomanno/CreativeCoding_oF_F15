@@ -17,6 +17,26 @@
 
 * 8:15-9:40 — In-Class Exploration, Project 2 Concepting, Working w/ Conor & Regina
 
+###Helpful Resources
+
+**Taken from Patricio:**
+
+Readings:
+
+* [http://www.cplusplus.com/articles/z6vU7k9E/](http://www.cplusplus.com/articles/z6vU7k9E/)
+* [https://github.com/openframeworks/ofBook/blob/master/chapters/memory/chapter.md](https://github.com/openframeworks/ofBook/blob/master/chapters/memory/chapter.md)
+* [http://ptgmedia.pearsoncmg.com/images/9780321334879/samplepages/0321334876.pdf](http://ptgmedia.pearsoncmg.com/images/9780321334879/samplepages/0321334876.pdf)
+
+Videos:
+
+* [https://www.youtube.com/watch?v=TgsH02sORZ0](https://www.youtube.com/watch?v=TgsH02sORZ0)
+* [https://www.youtube.com/watch?v=jTSvthW34GU](https://www.youtube.com/watch?v=jTSvthW34GU)
+* [https://www.youtube.com/watch?v=H4MQXBF6FN4](https://www.youtube.com/watch?v=H4MQXBF6FN4)
+* [https://www.youtube.com/watch?v=_eR4rxnM7Lc](https://www.youtube.com/watch?v=_eR4rxnM7Lc)
+* [https://www.youtube.com/watch?v=73Z7gaAvovQ](https://www.youtube.com/watch?v=73Z7gaAvovQ)
+
+
+
 ### HW due next Thursday (10/22/15) @ 6pm
 
 * GITHUB REPOS!!!
