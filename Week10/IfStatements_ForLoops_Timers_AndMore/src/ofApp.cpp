@@ -30,11 +30,13 @@ void ofApp::update(){
     //a timer!!! these are very useful.
     if(ofGetElapsedTimeMillis() - timeOfLastImportantMomemt > 3000){ //if system as logged 3 more seconds since last important moment
 //        cout << "Important Moment!" << endl;
-        for(int i = 0; i < myThings.size(); i++){ //loop through all of my things, and set there color to a new color
-            cout << i;
+        for(int k = 0; k < myThings.size(); k++){ //loop through all of my things, and set there color to a new color
+            cout << "-----------------" << endl;
+            cout << k;
             cout << ", ";
-            cout << numRows*numColumns << endl;
-            myThings[i].myColor = myThings[i].returnNewColor(i, numColumns*numRows); //have each thing pick a new color
+            cout << myThings.size() << endl;
+            myThings[k].myColor = myThings[k].returnNewColor(k, 100); //have each thing pick a new color
+            cout << "-----------------" << endl;
         }
         timeOfLastImportantMomemt = ofGetElapsedTimeMillis(); //
     }
@@ -76,7 +78,7 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    if(!haveIGrabbedAThing){
+    if(haveIGrabbedAThing == false){ //only grab something if you are not already grabbing something else
         for(int i = 0; i < myThings.size(); i++){
             int minX = (myThings[i].pos.x - myThings[i].diameter/2);
             int maxX = (myThings[i].pos.x + myThings[i].diameter/2);

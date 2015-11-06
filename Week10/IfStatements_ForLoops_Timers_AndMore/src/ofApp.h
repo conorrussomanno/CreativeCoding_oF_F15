@@ -27,7 +27,7 @@ class ofApp : public ofBaseApp{
         float timeOfLastImportantMomemt; //for our timer in ofApp.update();
         int xMargin, yMargin;
         int numColumns, numRows;
-        bool haveIGrabbedAThing;
-        int thingGrabbed;
+        bool haveIGrabbedAThing; //keep track of if I've grabbed anything
+        int thingGrabbed;  //this is the number of the thing that I grab
 		
 };
