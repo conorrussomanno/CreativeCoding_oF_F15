@@ -17,7 +17,7 @@ void Ball::setup(){
     vel.y = 5; //initial speed in the vertical direction
     acc.x = 0; //initial horizontal acceleration
     acc.y = .5; //initial vertical acceleration
-    diameter = 50; //initial Ball diameter
+    diameter = 100; //initial Ball diameter
     bounciness = .9;
     ballColor = ofColor(31, 69, 110);
     
@@ -106,8 +106,18 @@ void Ball::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
-void Ball::mousePressed(int x, int y, int button){
-
+void Ball::mousePressed(int x, int y){
+    
+    if(abs(x - pos.x) <= diameter/2){
+        if(abs(y - pos.y) <= diameter/2){
+            vel.x = 0;
+            vel.y = 0;
+            acc.x = 0;
+            acc.y = 0;
+            cout << "GRABBED!" << endl;
+            
+        }
+    }
 }
 
 //--------------------------------------------------------------

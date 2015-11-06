@@ -21,17 +21,17 @@ void ofApp::systemStart(float _mouseX, float _mouseY){
 //    myBall.setup();
     
     //setup many balls
-    numBalls = 1000;
+    numBalls = 10;
     for(int i = 0; i < numBalls; i++){
         Ball temp;
         temp.setup(_mouseX,                          //xPos
 //                       ((ofGetHeight()-100)/(numBalls-1))*i + 50,                //yPos
                       _mouseY,                //yPos
                        ofRandom(-5,5),                                                        //xVel
-                       ofRandom (-5,5),                                                        //yVel
+                       ofRandom (-5,5),                                            //yVel
                        0,                                                        //xAcc
                        .5,                                                        //yAcc
-                       10,                                                       //diameter
+                       50,                                                       //diameter
                        .85,                                                       //bounciness
                        ofColor(ofRandom(255), ofRandom(255), ofRandom(255))); //ballColor
         balls.push_back(temp);
@@ -73,7 +73,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+    systemStart(mouseX, mouseY);
 }
 
 //--------------------------------------------------------------
@@ -93,7 +93,9 @@ void ofApp::mouseDragged(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-    systemStart(mouseX, mouseY);
+    for(int i = 0; i < numBalls; i++){
+        balls[i].mousePressed(mouseX, mouseY);
+    }
 }
 
 //--------------------------------------------------------------
