@@ -23,7 +23,7 @@
 
 
 
-### HW due next Thursday (10/22/15) @ 6pm
+### HW due next class
 
 * Final Project!!! Come to class after Thanksgiving (in 2 weeks) with concept, pseudocode, and first prototypes.
 	* Create a Repo for your final project
