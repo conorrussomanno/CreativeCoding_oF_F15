@@ -3,6 +3,12 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
+    //Systemwide Settings
+    ofEnableAlphaBlending();
+    ofSetVerticalSync(TRUE);
+    ofSetBackgroundAuto(FALSE);
+    ofSetFrameRate(60);
+    
     //number of birds initiation
     numBirds = 100;
     
@@ -12,6 +18,8 @@ void ofApp::setup(){
         tempBird.setup(); //give it life
         myBirds.push_back(tempBird); //copy it and stick it in the vectory
     } //tempBird is no more
+    
+    
 
 }
 
@@ -19,15 +27,29 @@ void ofApp::setup(){
 void ofApp::update(){
 
     for(int i = 0; i < myBirds.size(); i++){//loop through every bird
-        ofPoint tempAcc;//create temporary acceleration, and 3 sub accelerations that will soon be calculated and added to our birds vel
-        ofPoint a1 = accTowardsCenterOfMass(i);
-        ofPoint a2 = accAwayFromNearbyBirds(i);
-        ofPoint a3 = accInDirectionOfNearbyBirdMovement(i);
-        //A1 = the bird wanting to move towards the middle of all other birds
-        //A2 = the bird wanting to move away from fellow birds that are too close
-        //A3 = the bird wanting to move the same speed as nearby friends
-        tempAcc = a1 + a2 + a3; //A = A1 + A2 + A3 ... find my total influence of sub-intentions
-        myBirds[i].acc = tempAcc; //myBirds.acc = A
+        
+        
+        //----------------------------------------------------------------
+        // create temporary (ie this frame) acceleration (A), and 3 sub accelerations (A1, A2, A3) that will soon be calculated and added to our birds vel
+        //----------------------------------------------------------------
+        ofPoint A;  // A
+        ofPoint A1 = accTowardsCenterOfMass(i); // A1 - the bird wanting to move towards the middle of all other birds
+        ofPoint A2 = accAwayFromNearbyBirds(i); // A2 - the bird wanting to move away from fellow birds that are too close
+        ofPoint A3 = accInDirectionOfNearbyBirdMovement(i); // A3 - the bird wanting to move the same speed as nearby friends
+        
+        //----------------------------------------------------------------
+        // Give this bird some individuality
+        //----------------------------------------------------------------
+        float loneWolfliness = 1.0; // lW - find this bird's desire to explore alone
+        float proximityComfort = 1.0; // pC - find this bird's apathy to being in close quarters with other birds
+        float flowConsideration = 1.0; // fC - find this bird's consideration for other birds' desire to get home from work
+        
+        //----------------------------------------------------------------
+        // A = (aF) * ( (lW)*A1 + (pC)*A2 + (fC)*A3 ) ... find my total influence of sub-intentions
+        //----------------------------------------------------------------
+        float aFactor = 0.02; // aF - a multiplier for scaling the tempAcc
+        A = (aFactor) * ((loneWolfliness)*A1 + (proximityComfort)*A2 + (flowConsideration)*A3);
+        myBirds[i].acc = A; //myBirds.acc = A
     }
     
     for(int i = 0; i < myBirds.size(); i++){
@@ -38,6 +60,15 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    
+    //** Create Fading Effect
+    ofPushStyle();
+        ofSetColor(255,255,255,50);
+        ofRect(0, 0, ofGetWidth(), ofGetHeight());
+    ofPopStyle();
+    //**
+    
+    
     for(int i = 0; i < myBirds.size(); i++){
         myBirds[i].draw();
     } //tempBird is no more
@@ -56,8 +87,8 @@ ofPoint ofApp::accTowardsCenterOfMass(int birdNumber){
     megaPosition = megaPosition / (myBirds.size()-1); //add position of other bird to megapostion
     //divide megaposition by number of birds - 1
     
-    cout << "megaPosition = ";
-    cout << megaPosition << endl;
+//    cout << "megaPosition = ";
+//    cout << megaPosition << endl;
     
     myValue = megaPosition - myBirds[birdNumber].pos;//myValue = the difference between current birds position and megaPosition
     myValue = myValue.normalize();
