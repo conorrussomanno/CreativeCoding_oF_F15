@@ -29,6 +29,6 @@
 	* Create a Repo for your final project
 	* Put your concepts, code, inspiration, and any other relevant content in the repo (create a readme that describes your project concept) 
 
-![image](/1.png)
+![image](1.png)
 ![image](2.png)
 ![image](3.png)
