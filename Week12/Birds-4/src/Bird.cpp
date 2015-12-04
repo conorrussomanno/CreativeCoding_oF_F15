@@ -13,7 +13,7 @@ void Bird::setup(){
     
     //physical attributes
     tailLength = ofRandom(4,8);
-    radius = ofRandom(2,4);
+    radius = ofRandom(5,10);
     topSpeed = ofRandom(5,30);
     
     //personality traits
@@ -72,15 +72,34 @@ void Bird::draw(){
     ofPushStyle();
     
         if(posPrevious.size() >= 2){
-            //draw tail
+            //==================================================
+            // draw fade tail
+            //==================================================
+            
             for (int i = 0; i < posPrevious.size() - 1; i++) {
-                ofSetColor(100, 155, 215, (int)((float)255*((float)i/(float)posPrevious.size())));
+                ofSetColor(255,220,150, (int)((float)100*((float)i/(float)posPrevious.size())));
+//                ofSetColor(100, 155, 215, (int)((float)100*((float)i/(float)posPrevious.size())));
                 //cout << "drawingTail: " << i << endl;
                 //cout << posPrevious[i].x << " | " << posPrevious[i].y << posPrevious[i].x << " | " << posPrevious[i+1].x << " | " << posPrevious[i+1].y << endl;
                 
                 ofSetLineWidth((radius/tailLength)*(i));
                 ofLine(posPrevious[i].x, posPrevious[i].y, posPrevious[i+1].x, posPrevious[i+1].y);
             }
+            
+            //==================================================
+            // curved tails : ) getting rid of geometric look
+            //==================================================
+            
+            ofPushStyle();
+            ofNoFill();
+            ofSetColor(255,220,150, 255);
+            ofBeginShape();
+            for(int i = 0; i < tailLength; i++){
+                ofCurveVertex(posPrevious[i].x,posPrevious[i].y);
+            }
+            ofCurveVertex(pos.x, pos.y);
+            ofEndShape();
+            ofPopStyle();
         }
     
         //draw body

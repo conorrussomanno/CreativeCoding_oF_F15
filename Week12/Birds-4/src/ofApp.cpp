@@ -8,7 +8,7 @@ void ofApp::setup(){
     ofSetVerticalSync(TRUE);
     ofSetBackgroundAuto(FALSE);
     ofSetFrameRate(60);
-    ofSetFullscreen(true);
+//    ofSetFullscreen(true);
     ofSetBackgroundColor(0, 0, 0);
     ofSetCircleResolution(128);
     
@@ -25,6 +25,11 @@ void ofApp::setup(){
         tempBird.setup(); //give it life
         myBirds.push_back(tempBird); //copy it and stick it in the vectory
     } //tempBird is no more
+    
+    
+    //cursorAmp is the magnitude multiplier to the cursor attraction force it will approach an assymptote of
+    cursorAmp = 1.0;
+    ampAsymptote = 7.0;
 }
 
 //--------------------------------------------------------------
@@ -49,8 +54,6 @@ void ofApp::update(){
         herdDependency = myBirds[i].herdDependency; // lW - find this bird's desire to explore alone
         proximityDiscomfort = myBirds[i].proximityDiscomfort; // pD - find this bird's apathy to being in close quarters with other birds
         flowConsideration = myBirds[i].flowConsideration; // fC - find this bird's consideration for other birds' desire to get home from work
-        cursorCuriosity;
-        
         if(isMousePressed){
             cursorCuriosity = myBirds[i].cursorCuriosity; // cC - find the bird's desire to move towards your cursor
         } else {
@@ -60,7 +63,9 @@ void ofApp::update(){
         //----------------------------------------------------------------
         // A = (aF) * ( (lW)*A1 + (pD)*A2 + (fC)*A3 (cC)*A4 ) ... find my total influence of sub-intentions
         //----------------------------------------------------------------
-        A = (aFactor) * ((herdDependency)*A1 + (proximityDiscomfort)*A2 + (flowConsideration)*A3 + (cursorCuriosity)*A4);
+        
+        A = (aFactor) * ((herdDependency)*A1 + (proximityDiscomfort)*A2 + (flowConsideration)*A3 + (cursorAmp)*(cursorCuriosity)*A4);
+        
         myBirds[i].acc = A; //myBirds.acc = A
     }
     
@@ -75,6 +80,20 @@ void ofApp::update(){
         }
     }
     frameCounter++; //update the frame counter that's being tracked to store previous positions
+    
+    //if isMousePressed
+    if(isMousePressed){
+        secSincePress = (ofGetElapsedTimeMillis()-timeOfPress)/1000;
+        y = ((-10)/((.5)*secSincePress+1)+10) / (10);   // y = ((-10)/((0.5)x+1) + 10) / (10) ... to get an asymptote approaching 10
+        cout << "cursorAmp: " << cursorAmp << endl;
+        cursorAmp = y * ampAsymptote;
+        
+    } else {
+        cursorAmp = 1.0;
+    }
+    //make radius of ball scale but approach an asymptote (maximum radius)
+    //and increase the weight of the inward acceleration caused by mousePressed
+    //upon mouse released ... reset values
 }
 
 //--------------------------------------------------------------
@@ -92,15 +111,33 @@ void ofApp::draw(){
     } //tempBird is no more
     
     if(isMousePressed){ //cursor glow sphere when pressed
+        //flickerCircleInMiddle
+        
+        
         ofPushStyle();
-            float sinFadeNormalized = ofMap(sin(0.005*ofGetElapsedTimeMillis()), -1, 1, 0, 1);
-            ofSetColor(255,114,0, 255*sinFadeNormalized);
-            ofEllipse(mouseX, mouseY, 30*(1/(sinFadeNormalized+1)), 30*(1/(sinFadeNormalized+1)));
+        
+            //faded faint radially green gradient seen when holding mouse down
+            int orbRez = 100;
+            ofSetColor(255, 255, 255, 1);
+            for(int i = 0; i < orbRez; i++){
+                float tempRadius = (float)i/(float)orbRez;
+                ofEllipse(mouseX, mouseY, 120*tempRadius, 120*tempRadius);
+            }
+        
+            //sinusoidal blinking of green light when mouse is pressed
+            if (sin(0.1*ofGetElapsedTimeMillis()) >= 0) {
+                float sinFadeNormalized = ofMap(sin(0.1*ofGetElapsedTimeMillis()), -1, 1, 0, 1);
+                float maxRadius = 80;
+                ofSetColor(100, 215, 155, 125*sinFadeNormalized);
+                ofEllipse(mouseX, mouseY, y*maxRadius*(1/(sinFadeNormalized)+1), y*maxRadius*(1/(sinFadeNormalized)+1));
+            }
+
+        
         ofPopStyle();
     } else {
         ofPushStyle();
-            ofSetColor(255,0,0);
-            ofEllipse(mouseX, mouseY, 5, 5);
+            ofSetColor(255, 0, 0);
+            ofEllipse(mouseX, mouseY, 4, 4);
         ofPopStyle();
     }
 
@@ -182,7 +219,6 @@ ofPoint ofApp::accTowardsCursor(int birdNumber){
     }
     
     myValue = amplifier*myValue.normalize();
-    
     return myValue;
 }
 
@@ -209,6 +245,8 @@ void ofApp::mouseDragged(int x, int y, int button){
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
     isMousePressed = true;
+    timeOfPress = ofGetElapsedTimeMillis();
+    secSincePress = 0;
 }
 
 //--------------------------------------------------------------

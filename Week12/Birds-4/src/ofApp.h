@@ -41,7 +41,7 @@ class ofApp : public ofBaseApp{
     float herdDependency; // lW - find this bird's desire to explore alone
     float proximityDiscomfort; // pD - find this bird's apathy to being in close quarters with other birds
     float flowConsideration; // fC - find this bird's consideration for other birds' desire to get home from work
-    float cursorCuriosity;
+    float cursorCuriosity;  //cC
     
     ofPoint myValue;
     ofPoint megaPosition;
@@ -52,6 +52,11 @@ class ofApp : public ofBaseApp{
     ofPoint avgVelOfNearbyBirds;;
     ofPoint myMousePosition;
     
-    float amplifier;
+    float y;   // y = ((-10)/(x+1) + 10) / (10) ... to get an asymptote approaching 10
+    float ampAsymptote;  //multiplier to set the master radius
+    float cursorAmp;
+    float timeOfPress;  
+    float secSincePress; //seconds since pressed ...  (this will be x in the equation above)
+    
 		
 };
